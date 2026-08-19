@@ -92,7 +92,7 @@ jobs:
           mkdir -p allure-history target/allure-results
 
       - name: Build Allure HTML report
-        uses: simple-elf/allure-report-action@v1.9
+        uses: simple-elf/allure-report-action@v1.15
         if: always() && hashFiles('target/allure-results/**') != ''
         with:
           allure_results: target/allure-results

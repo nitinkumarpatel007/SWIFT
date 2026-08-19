@@ -1,0 +1,8 @@
+{
+  "pageName": "Careers Page",
+  "url": "https://www.swift.com/about-us/careers",
+  "expectedTitleContains": "Careers",
+  "expectedHeadingContains": "Careers",
+  "minVisibleImages": 1,
+  "openPositionsHrefContains": "myworkdayjobs.com"
+}

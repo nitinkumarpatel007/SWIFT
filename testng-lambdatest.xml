@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Runs the suite on LambdaTest's cloud grid across Chrome, Firefox and Edge.
+  Requires LT_USERNAME and LT_ACCESS_KEY environment variables to be set.
+  Usage: mvn test -Dsuite=testng-lambdatest.xml
+-->
+<suite name="Swift LambdaTest Suite" parallel="tests" thread-count="3" verbose="1">
+
+    <listeners>
+        <listener class-name="com.swift.framework.listeners.TestListener"/>
+        <listener class-name="com.swift.framework.listeners.RetryListener"/>
+    </listeners>
+
+    <test name="LambdaTest-Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="executionMode" value="remote"/>
+        <classes>
+            <class name="com.swift.tests.HomePageTests"/>
+            <class name="com.swift.tests.CareersPageTests"/>
+            <class name="com.swift.tests.BrokenLinksTest"/>
+            <class name="com.swift.tests.ImageCountTest"/>
+        </classes>
+    </test>
+
+    <test name="LambdaTest-Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="executionMode" value="remote"/>
+        <classes>
+            <class name="com.swift.tests.HomePageTests"/>
+            <class name="com.swift.tests.CareersPageTests"/>
+        </classes>
+    </test>
+
+    <test name="LambdaTest-Edge">
+        <parameter name="browser" value="edge"/>
+        <parameter name="executionMode" value="remote"/>
+        <classes>
+            <class name="com.swift.tests.HomePageTests"/>
+            <class name="com.swift.tests.CareersPageTests"/>
+        </classes>
+    </test>
+</suite>

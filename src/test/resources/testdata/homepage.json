@@ -1,0 +1,7 @@
+{
+  "pageName": "Home Page",
+  "url": "https://www.swift.com",
+  "expectedTitleContains": "Swift",
+  "minVisibleImages": 1,
+  "expectedFooterTextContains": "Swift"
+}
